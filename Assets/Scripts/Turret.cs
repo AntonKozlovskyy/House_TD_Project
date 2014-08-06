@@ -51,7 +51,7 @@ public class Turret : MonoBehaviour
                     //выпускаем пулю
                     GameObject temp = (GameObject)Instantiate(bullet, transform.forward + transform.position, Quaternion.identity);
                     //назначаем пуле цель
-                    temp.GetComponent<Bullet>().target = target;
+                    temp.GetComponent<Bullet>().target = hit.collider.gameObject;
                 }
             }
         }
