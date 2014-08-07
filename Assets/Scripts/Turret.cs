@@ -41,6 +41,10 @@ public class Turret : MonoBehaviour
             //пускаем луч
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
+
+            //выпускаем пулю
+            GameObject temp = (GameObject)Instantiate(bullet, transform.forward + transform.position, transform.rotation);
+            
             if (Physics.Raycast(ray, out hit, range))
             {
                 //если луч пересек объект Enemy, то наносим урон
@@ -48,8 +52,6 @@ public class Turret : MonoBehaviour
                 {
                     hit.collider.SendMessage("DealDamage", damage, SendMessageOptions.RequireReceiver);
 
-                    //выпускаем пулю
-                    GameObject temp = (GameObject)Instantiate(bullet, transform.forward + transform.position, Quaternion.identity);
                     //назначаем пуле цель
                     temp.GetComponent<Bullet>().target = hit.collider.gameObject;
                 }
