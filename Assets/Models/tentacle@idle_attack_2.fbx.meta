@@ -1,15 +1,32 @@
 fileFormatVersion: 2
-guid: f9685b590ea720d46b964045cccfa982
+guid: 3c886e3ba247ca346b8348c132d4b02f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: polymsh
-    6400000: //RootNode
+    100000: Shadow_rig1:bone
+    100002: Shadow_rig1:bone1
+    100004: Shadow_rig1:bone2
+    100006: Shadow_rig1:bone3
+    100008: Shadow_rig1:bone4
+    100010: Shadow_rig1:bone5
+    100012: Shadow_rig1:bone6
+    100014: Shadow_rig1:Shadow_rig1
+    100016: tentacle
+    100018: //RootNode
+    400000: Shadow_rig1:bone
+    400002: Shadow_rig1:bone1
+    400004: Shadow_rig1:bone2
+    400006: Shadow_rig1:bone3
+    400008: Shadow_rig1:bone4
+    400010: Shadow_rig1:bone5
+    400012: Shadow_rig1:bone6
+    400014: Shadow_rig1:Shadow_rig1
+    400016: tentacle
+    400018: //RootNode
+    4300000: tentacle
+    7400000: Take 001
     9500000: //RootNode
+    13700000: tentacle
   materials:
     importMaterials: 1
     materialName: 0
@@ -30,7 +47,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

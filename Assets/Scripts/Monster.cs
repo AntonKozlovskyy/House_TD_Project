@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
     public GameObject house;
     public float speed = 0.1f;
 
+
     private float damage;
     private int currentPathPoint = 0;
     private bool moveToHouse = false;
@@ -26,6 +27,8 @@ public class Monster : MonoBehaviour
         //если не задана траектория, то двигаем врага сразу к дому
         if (path.Count <= 0)
             moveToHouse = true;
+        else
+            rigidbody.useGravity = false;
     }
     void FixedUpdate()
     {
@@ -69,5 +72,4 @@ public class Monster : MonoBehaviour
             }
         }
     }
-
 }
