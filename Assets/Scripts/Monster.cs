@@ -35,7 +35,8 @@ public class Monster : MonoBehaviour
         //если монстр стукнулся с большой высоты
         if (Mathf.Abs(rigidbody.velocity.y - lastVelocity) >= 5f && rigidbody.velocity.y == 0)
         {
-            SendMessage("DealDamage", Mathf.Abs(rigidbody.velocity.y - lastVelocity - 5) * gravityDamageMultiply);
+            SendMessage("DealDamage", GetComponent<Health>().maxHealth);
+            //SendMessage("DealDamage", Mathf.Abs(rigidbody.velocity.y - lastVelocity - 5) * gravityDamageMultiply);
         }
         lastVelocity = rigidbody.velocity.y;
 
