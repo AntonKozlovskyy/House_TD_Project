@@ -405,6 +405,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &319904267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +728,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!54 &633610194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -846,6 +848,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &710010506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1155,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &856244397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,14 +1298,14 @@ Transform:
   m_LocalPosition: {x: -3.67646718, y: 2.70663261, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1525553730}
+  - {fileID: 710010503}
   - {fileID: 1959071327}
+  - {fileID: 856244394}
   - {fileID: 1983558114}
   - {fileID: 319904264}
-  - {fileID: 633610191}
-  - {fileID: 710010503}
+  - {fileID: 1525553730}
   - {fileID: 1546606494}
-  - {fileID: 856244394}
+  - {fileID: 633610191}
   m_Father: {fileID: 0}
 --- !u!1 &1057898858
 GameObject:
@@ -1443,6 +1447,68 @@ Prefab:
   m_RootGameObject: {fileID: 1525553723}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1212398012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1212398014}
+  - 108: {fileID: 1212398013}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1212398013
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212398012}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 1
+  m_Color: {r: .95588237, g: .0140571073, b: .0140571073, a: 1}
+  m_Intensity: .5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1212398014
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212398012}
+  m_LocalRotation: {x: .405770093, y: -.104144149, z: .329947531, w: .845954716}
+  m_LocalPosition: {x: 0, y: 9.29805183, z: -7.83507633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1386786094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1589,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &1525553726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1654,6 +1721,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &1546606497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,6 +2197,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &1959071330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2339,6 +2408,7 @@ MonoBehaviour:
   path: []
   house: {fileID: 259060449}
   speed: .5
+  gravityDamageMultiply: 3
 --- !u!114 &1983558117
 MonoBehaviour:
   m_ObjectHideFlags: 0
