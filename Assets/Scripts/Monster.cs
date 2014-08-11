@@ -6,9 +6,9 @@ public class Monster : MonoBehaviour
 {
     public List<GameObject> path = new List<GameObject>();
     public GameObject house;
-    public float speed = 0.1f;
+    public float speed = 0.1f, gravityDamageMultiply = 3f;
 
-
+    private float lastVelocity;
     private float damage;
     private int currentPathPoint = 0;
     private bool moveToHouse = false;
@@ -32,6 +32,13 @@ public class Monster : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //если монстр стукнулся с большой высоты
+        if (Mathf.Abs(rigidbody.velocity.y - lastVelocity) >= 5f && rigidbody.velocity.y == 0)
+        {
+            SendMessage("DealDamage", Mathf.Abs(rigidbody.velocity.y - lastVelocity - 5) * gravityDamageMultiply);
+        }
+        lastVelocity = rigidbody.velocity.y;
+
         //если монстр долетел до дома - наносим урон дому
         if (Vector3.Distance(house.transform.position, transform.position) < 1f)
         {
